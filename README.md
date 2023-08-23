@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Origin Health task Rahul Kulkarni(1BM20MD038)
 
-## Getting Started
-
-First, run the development server:
-
+You can start the development server through the following command after downloading the project from zip folder.
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm i && npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If that doesn't work you can clone the github repo and run the follwoing commands
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/rahulrk85/origin-health
+cd origin-health
+npm i
+npm run dev 
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### About project task
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- As stated in the task we have 3 pages
+    - Login page
+    - normal user dashboard page
+    - admin user dashboard page
+- For login and authentication i am using `next-auth` package.
+- Once the user login the login page is not accessible till that user logs out.
+- normal or admin dashboard page have restricted access. According to the user input and type while logging in we allow the page to be accessesed.
+- For **username** field enter `admin` while login process to access adminDashboard and admin related powers. You can enter `admin123` for **password** field for both admin and normal user login.
+- You can enter any name other than `admin` to access the normal user page and powers.
+- Normal user can only see the images and rename the labels. i.e; rename the files.
+- Admin user can do everything a normal user can do and to that he can upload new images or lables as said in the task description.
+- We have all the images stored in `public/images` directory.
+- The sorting of the images is happening in ascending order of the image file names in lexigraphical order.
