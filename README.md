@@ -13,6 +13,12 @@ cd origin-health
 npm i
 npm run dev 
 ```
+Then make a file at root directory of the project with name `.env.local` and add the following content to it
+
+```bash
+NEXTAUTH_URL=http://localhost:3000/
+NEXTAUTH_SECRET=ab3a17ed88d347554a268ac92feb8fe9
+```
 
 
 ---
